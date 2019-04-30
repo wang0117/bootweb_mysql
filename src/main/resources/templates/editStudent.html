@@ -35,7 +35,7 @@
             <div class="col-sm-offset-2 col-sm-10">
                 <input type="submit" value="Submit" class="btn btn-info" />
                 &nbsp; &nbsp; &nbsp;
-                <a href="/list" th:href="@{/list}" class="btn btn-info">Back</a>
+                <a href="/list" th:href="@{/list(ownUser=${ownUser})}" class="btn btn-info">Back</a>
             </div>
 
         </div>
