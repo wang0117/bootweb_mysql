@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>studentList</title>
+    <link rel="stylesheet" th:href="@{/css/bootstrap.css}"></link>
+</head>
+<body class="container">
+<br/>
+<h2>学生列表</h2>
+<br/><br/>
+<div class="with:80%">
+    <input type="hidden" name="ownUser" th:value="*{ownUser}" />
+    <table class="table table-hover">
+        <thead>
+        <tr>
+            <th>#</th>
+            <th>Student Name</th>
+            <th>class Name</th>
+            <th>Age</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr  th:each="student : ${studentList}">
+            <th scope="row" th:text="${student.id}">1</th>
+            <td th:text="${student.studentName}">neo</td>
+            <td th:text="${student.className}">Otto</td>
+            <td th:text="${student.age}">6</td>
+            <td><a th:href="@{/toEditStudent(id=${student.id})}">edit</a></td>
+            <td><a th:href="@{/delete(id=${student.id})}">delete</a></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<div class="form-group">
+    <div class="col-sm-2 control-label">
+        <a href="/toAddStudent" th:href="@{/toAddStudent(ownUser=${ownUser})}" class="btn btn-info">add</a>
+    </div>
+</div>
+
+</body>
+</html>
