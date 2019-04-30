@@ -1,0 +1,12 @@
+com\wch\controller\StudentController.class
+com\wch\service\StudentService.class
+com\wch\model\User.class
+com\wch\controller\UserController.class
+com\wch\Application.class
+com\wch\repository\UserRepository.class
+com\wch\controller\TestController.class
+com\wch\repository\StudentRepository.class
+com\wch\service\impl\StudentServiceImpl.class
+com\wch\service\impl\UserServiceImpl.class
+com\wch\model\Student.class
+com\wch\service\UserService.class
